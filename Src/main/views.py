@@ -68,10 +68,10 @@ def edit_view(request, id):
         if request.method == 'POST':
             listing_form = ListingForm(request.POST, request.FILES, instance=listing)
             location_form = LocationForm(request.POST, instance=listing.location)
-            if listing_form.is_valid and location_form.is_valid:
+            if listing_form.is_valid() and location_form.is_valid():
                 listing_form.save()
                 location_form.save()
-                messages.info()(request, f'Listing {id} updated successfully!')
+                messages.info(request, f'Listing {id} updated successfully!')
                 return redirect('home')
             else:
                 messages.error(request, f'An error occured while trying to edit the listing.')

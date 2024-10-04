@@ -31,7 +31,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if env('DJANGOAPPMODE') == 'DEBUG' else False
 
-ALLOWED_HOSTS = ["127.0.0.1", "wheeldeal.onrender.com", "52.74.149.6"]
+ALLOWED_HOSTS = ["127.0.0.1", "wheeldeal.onrender.com", "52.74.149.6", "localhost"]
 
 
 # Application definition
